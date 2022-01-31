@@ -1,9 +1,9 @@
-# <center><b>Hi there, I'm Brian 👋</b></center>
+# <p style="text-align: center;"><b>Hi there, I'm Brian 👋</b></p>
 
-<center><a href="https://twitter.com/illumincrotty"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>&nbsp;
+<p style="text-align: center;"><a href="https://twitter.com/illumincrotty"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/briancrotty-1/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
 <a href="https://open.spotify.com/user/1221888335?si=b40b6957f4b04c92"><img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=1DB954&color=black" alt="LinkedIn" /></a>&nbsp;
-</center>
+</p>
 
 <br />
 
