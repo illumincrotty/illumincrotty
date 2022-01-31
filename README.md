@@ -24,14 +24,14 @@ I'm a web and software developer with a passion for design and accessibility
 ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 <br />
 
-<!-- ## Stats
+## Stats
 
-<br /> -->
+<br />
 
 <!-- ![Brian's GitHub stats](https://github-readme-stats-pro.vercel.app/api?username=illumincrotty&count_private=true&include_all_commits=true)
 
 ![Brian's most used languages in the last year](https://api.githubtrends.io/user/svg/illumincrotty/langs?time_range=one_year&loc_metric=changed) -->
-
-<!-- ![Brian's GitHub overview](https://github.com/illumincrotty/illumincrotty/blob/master/generated/overview.svg)
-
-![Brian's langauge usage](https://github.com/illumincrotty/illumincrotty/blob/master/generated/languages.svg) -->
+<section style="text-align: center;">
+	<img align="center" src="https://github.com/illumincrotty/illumincrotty/raw/main/generated/overview.svg" alt="Brian's GitHub overview" style="max-width: 100%;">
+	<img align="center" src="https://github.com/illumincrotty/illumincrotty/raw/main/generated/languages.svg" alt="Brian's GitHub Languages" style="max-width: 100%;">
+</section>
