@@ -134,3 +134,7 @@ dmypy.json
 
 # PyCharm project files
 .idea
+node_modules
+
+
+.svelte-kit
