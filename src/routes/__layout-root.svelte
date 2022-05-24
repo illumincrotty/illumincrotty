@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Base from '$lib/components/layout/base.svelte';
+	import Base from '$lib/components/layout/base';
 </script>
 
 <Base>

@@ -1,0 +1,263 @@
+:root {
+	/* colors */
+	/* #00A485 --*/
+	/* #6397AE */
+	/* #8B86D6 */
+	/* #AB6DFF --*/
+	/* #d166c7 */
+	/* #e86190 */
+	/* #F65D5A --*/
+
+	--measure: 60ch;
+	--padding: 1.2rem;
+	--border-thin: 0.1rem;
+
+	--color-comp: 220deg 13%;
+
+	--mid-l-diff: 30%;
+	--min-l-diff: 15%;
+
+	--dark-l: 10%;
+	--light-l: 90%;
+
+	--dark: hsl(var(--color-comp) var(--dark-l));
+	--dark-mid: hsl(var(--color-comp) calc(var(--dark-l)+var(--mid-l-diff)));
+	--dark-min: hsl(var(--color-comp) calc(var(--dark-l)+var(--min-l-diff)));
+
+	--dark-overlay: hsl(var(--color-comp) var(--dark-l) / 0.3);
+
+	--light: hsl(var(--color-comp) var(--light-l));
+	--light-overlay: hsl(var(--color-comp) var(--light-l) / 0.1);
+	--light-mid: hsl(var(--color-comp) calc(var(--light-l)-var(--mid-l-diff)));
+	--light-min: hsl(var(--color-comp) calc(var(--light-l)-var(--min-l-diff)));
+
+	--overlay: var(--light-overlay);
+	--overlay-components: var(--light-components);
+	--anti-overlay: var(--dark-overlay);
+	--anti-overlay-components: var(--dark-components);
+
+	--cornflower-blue: hsl(224, 84%, 68%);
+	--shiny-shamrock: hsl(144, 32%, 47%);
+	--french-rose: hsl(342, 84%, 65%);
+
+	--theme-1: var(--cornflower-blue);
+	--theme-2: var(--shiny-shamrock);
+	--theme-3: var(--french-rose);
+
+	--text: var(--light);
+	--bg: var(--dark);
+	--theme: var(--theme-1);
+
+	/* --font-m: calc(0.8em + 0.5vmin); */
+
+	/* Font Stuff */
+	--font-ratio: 1.25;
+	--font-minimum-size: 16;
+	--font-maximum-size: 21;
+	--font-minimum-size-pixels: calc(var(--font-minimum-size) * 1px);
+	--font-m: calc(
+		var(--font-minimum-size-pixels) + (var(--font-maximum-size) - var(--font-minimum-size)) *
+			((100vw - 320px) / (1280 - 300))
+	);
+	--font-l: calc(var(--font-m) * var(--font-ratio));
+	--font-xl: calc(var(--font-l) * var(--font-ratio));
+	--font-2xl: calc(var(--font-xl) * var(--font-ratio));
+	--font-3xl: calc(var(--font-2xl) * var(--font-ratio));
+	--font-4xl: calc(var(--font-3xl) * var(--font-ratio));
+
+	--font-s: calc(var(--font-m) / var(--font-ratio));
+	/* --font-xs: calc(var(--font-s) / var(--font-ratio-2)); */
+
+	/* Box Shadow items
+	* from https://www.joshwcomeau.com/shadow-palette/
+	*/
+	--shadow-color: 0deg 0% 0%;
+	--shadow-elevation-low: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.04),
+		0px 0.8px 1.1px -0.8px hsl(var(--shadow-color) / 0.14);
+	--shadow-elevation-medium: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.04),
+		0px 1.3px 1.8px -0.4px hsl(var(--shadow-color) / 0.1),
+		0px 4.1px 5.7px -0.8px hsl(var(--shadow-color) / 0.16);
+	--shadow-elevation-high: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.04),
+		0px 2.3px 3.2px -0.2px hsl(var(--shadow-color) / 0.06),
+		0px 4.3px 5.9px -0.3px hsl(var(--shadow-color) / 0.09),
+		0px 7.2px 9.9px -0.5px hsl(var(--shadow-color) / 0.12),
+		0px 11.8px 16.3px -0.6px hsl(var(--shadow-color) / 0.15),
+		0.1px 19.1px 26.4px -0.8px hsl(var(--shadow-color) / 0.17);
+
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+
+	transition: background 0.5s, color 0.5s;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
+/* Defaults: light */
+:root {
+	color-scheme: light;
+	--text: var(--dark);
+	--bg: var(--light);
+	--overlay: var(--dark-overlay);
+	--overlay-components: var(--dark-components);
+	--anti-overlay: var(--light-overlay);
+	--anti-overlay-components: var(--light-components);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--text: var(--light);
+		--bg: var(--dark);
+		--overlay: var(--light-overlay);
+		--overlay-components: var(--light-components);
+		--anti-overlay: var(--dark-overlay);
+		--anti-overlay-components: var(--dark-components);
+	}
+}
+
+/* User setting: dark */
+[color-scheme='light'] {
+	color-scheme: light;
+	--text: var(--dark);
+	--bg: var(--light);
+	--overlay: var(--dark-overlay);
+	--overlay-components: var(--dark-components);
+	--anti-overlay: var(--light-overlay);
+	--anti-overlay-components: var(--light-components);
+}
+
+/* User setting: dark */
+[color-scheme='dark'] {
+	color-scheme: dark;
+	--text: var(--light);
+	--bg: var(--dark);
+	--overlay: var(--light-overlay);
+	--overlay-components: var(--light-components);
+	--anti-overlay: var(--dark-overlay);
+	--anti-overlay-components: var(--dark-components);
+}
+
+.dark {
+	color: var(--dark);
+	background: var(--bg);
+}
+
+a {
+	color: currentColor;
+	background: none;
+	text-decoration: underline solid var(--theme) 0.1rem;
+
+	text-decoration-skip-ink: none;
+	transition: all 0.4s;
+
+	&:hover,
+	&:focus-visible {
+		outline: none;
+		background: var(--theme);
+		color: var(--dark);
+		text-decoration: none;
+		/* text-decoration-color: var(--bg); */
+	}
+
+	&:active {
+		text-decoration-color: var(--theme);
+		color: var(--bg);
+		background: var(--text);
+		text-decoration: none;
+
+		/* text-decoration-color: var(--bg); */
+	}
+}
+
+.unlist {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: unset;
+	margin-top: var(--gap, 0);
+}
+
+/* 
+ * Utility class to hide content visually while keeping it screen reader-accessible.
+ * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
+ */
+.sr-only:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+body {
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	background: var(--bg);
+	color: var(--text);
+
+	height: fit-content;
+	width: 100%;
+	/* padding: 1rem 1rem; */
+	margin: 0;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	line-break: loose;
+	font-size: var(--font-m);
+	text-align: start;
+	position: relative;
+}
+
+h1 {
+	font-size: var(--font-2xl);
+	text-align: center;
+}
+
+h2 {
+	font-size: var(--font-xl);
+}
+
+button {
+	font: inherit;
+	color: inherit;
+	display: block;
+	border: 0.2rem solid var(--theme);
+	cursor: pointer;
+
+	&:hover,
+	&:focus-within {
+		background: var(--theme);
+		color: var(--dark);
+	}
+
+	&:active {
+		color: var(--bg);
+		background: var(--text);
+		border-color: var(--text);
+	}
+}
+
+p,
+li {
+	line-height: 1.8;
+}
+
+.shadow-pop {
+	transition: all 0.3s;
+	outline: none;
+	/* animation: shadow-pop-out 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); */
+	&:hover,
+	&:focus-visible,
+	&:active {
+		transform: translateY(-0.25em);
+
+		/* animation: shadow-pop-in 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both; */
+	}
+}
+
+.box {
+	display: block;
+	padding: var(--padding);
+	border-width: var(--border-thick);
+	border: var(--border-thick) solid;
+}

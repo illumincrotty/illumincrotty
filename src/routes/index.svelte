@@ -48,6 +48,8 @@
 </main>
 
 <style lang="postcss">
+	@import '$lib/style/every-layout/center.postcss';
+	@import '$lib/style/every-layout/stack.postcss';
 	.page-shift {
 		width: 100%;
 		height: calc(90vh - 2 * var(--padding));
@@ -66,7 +68,6 @@
 			var(--theme-3) 100%
 		);
 		border-image-slice: 1;
-		max-width: 100%;
 		box-shadow: var(--shadow-elevation-medium);
 		background: rgb(0, 0, 0, 0.8);
 		color: var(--light);
@@ -90,11 +91,18 @@
 	}
 
 	.grid-cluster {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-auto-flow: dense;
+		display: flex;
+		flex-wrap: wrap;
 		gap: var(--padding);
-		grid-auto-rows: minmax(10rem, auto);
+		width: 100%;
+
+		justify-content: center;
+
+		& > * {
+			flex: 0 1 auto;
+			flex-basis: 18rem;
+			min-height: 12rem;
+		}
 	}
 	h1 {
 		font-family: 'Shrikhand';
@@ -105,9 +113,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--padding);
-		max-width: var(--measure);
 		width: 100%;
-		margin-left: var(--padding);
-		margin-right: var(--padding);
+		padding: var(--padding);
 	}
 </style>
