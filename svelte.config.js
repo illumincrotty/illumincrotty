@@ -17,7 +17,7 @@ const config = {
 	kit: {
 		adapter: adapter({}),
 		paths: {
-			base: "illumincrotty/",
+			base: "illumincrotty",
 		},
 		appDir: 'internal',
 		vite: {},
