@@ -32,16 +32,16 @@
 	</div>
 	<h2 class="fun-text" style="text-align: center; font-size: var(--font-2xl);">Projects</h2>
 	<div class="grid-cluster">
-		<a class="card box" href="random">Random Number Generator</a>
-		<a class="card box" href="squeaker">Smooth Noise Generator</a>
-		<a class="card box" href="spotify-waveform">Spotify Data Deep Dive</a>
+		<a class="card box" href="random" rel="external">Random Number Generator</a>
+		<a class="card box" href="squeaker" rel="external">Smooth Noise Generator</a>
+		<a class="card box" href="spotify-waveform" rel="external">Spotify Data Deep Dive</a>
 		<a class="card box" href="https://github.com/illumincrotty/Dead-Simple-PubSub" rel="external"
 			>Type Safe Pub-Sub Implementation</a
 		>
-		<a class="card box" href="https://github.com/illumincrotty/tiny-inflate"
+		<a class="card box" href="https://github.com/illumincrotty/tiny-inflate" rel="external"
 			>A very lightweight Data Decompression Tool</a
 		>
-		<a class="card box" href="https://github.com/illumincrotty/tinydate"
+		<a class="card box" href="https://github.com/illumincrotty/tinydate" rel="external"
 			>A Dependency Free Date Formatter</a
 		>
 	</div>

@@ -13,7 +13,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 
-	export let status = 404;
 	export let error: Error;
 </script>
 

@@ -3,9 +3,7 @@
 	import Header from '$lib/components/layout/header.svelte';
 
 	export const title = 'Example';
-	let links: { href: string; label: string }[] = [
-		{ href: 'spotify-waveform', label: 'Spotify Analyzer' }
-	];
+	let links: { href: string; label: string }[] = [];
 </script>
 
 <Base>
