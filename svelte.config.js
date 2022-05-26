@@ -22,8 +22,11 @@ const config = {
 		paths: {
 			base: dev ? '' : '/illumincrotty'
 		},
-		vite: {}
+		vite: {},
+		trailingSlash: true
+		
 	}
+	
 };
 
 export default config;
