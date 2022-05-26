@@ -22,7 +22,11 @@
 		<g style={`transform: translate(0px, ${y < 2 ? 0 : Math.floor(y)}px);`}>
 			{#each Array.from({ length: dots * 2 + 1 }) as _, row}
 				{#each Array.from({ length: dots }) as _, col}
-					<circle cx={`${dotRatio * (col + 0.5)}vw`} cy={`${dotRatio * (row + 0.5)}vw`} r=".2%" />
+					<circle
+						cx={`${Math.floor(dotRatio * (col + 0.5))}vw`}
+						cy={`${Math.floor(dotRatio * (row + 0.5))}vw`}
+						r=".2%"
+					/>
 				{/each}
 			{/each}
 		</g>
