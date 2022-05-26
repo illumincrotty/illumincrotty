@@ -15,16 +15,18 @@
 			rel="stylesheet"
 		/>
 
-		< <meta http-equiv="content-security-policy" content=""><link rel="icon" type="image/svg" href="/illumincrotty/favicon.svg" data-svelte="svelte-8umjz8">
+		< <meta http-equiv="content-security-policy" content=""><title>Random Number Generator</title><link rel="icon" type="image/svg" href="/illumincrotty/favicon.svg" data-svelte="svelte-8umjz8">
 	<link rel="stylesheet" href="/illumincrotty/_app/immutable/assets/pages/__layout.svelte-0360cc5d.css">
 	<link rel="stylesheet" href="/illumincrotty/_app/immutable/assets/base-77ae7c1d.css">
+	<link rel="stylesheet" href="/illumincrotty/_app/immutable/assets/pages/random/index.svelte-9ae39b18.css">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/start-bb76eb8b.js">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/chunks/index-2f204da9.js">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/chunks/index-9c179107.js">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/chunks/paths-396f020f.js">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/pages/__layout.svelte-acc20def.js">
 	<link rel="modulepreload" href="/illumincrotty/_app/immutable/chunks/base-8ac4cfcc.js">
-	<link rel="modulepreload" href="/illumincrotty/_app/immutable/pages/projects/index.svelte-2d5b6d8b.js">
+	<link rel="modulepreload" href="/illumincrotty/_app/immutable/pages/random/index.svelte-cefe1ac9.js">
+	<link rel="modulepreload" href="/illumincrotty/_app/immutable/chunks/alea.modern-14e15990.js">
 	</head>
 
 	<body>
@@ -49,13 +51,41 @@
 </div>
 
 	
+
+
+	<main class="svelte-ju48ks"><h1 class="fun-text svelte-ju48ks">Random Number Generator</h1>
+		<div class="center-i stack full-width svelte-ju48ks"><label class="svelte-ju48ks">Seed: <input type="text" class="svelte-ju48ks" value=""></label>
+			<div class="switcher svelte-ju48ks"><div class="rad-item svelte-ju48ks"><input type="radio" id="fract32" name="genType" value="random" checked class="svelte-ju48ks" checked>
+					<label for="fract32" class="svelte-ju48ks">Fraction</label></div>
+				<div class="rad-item svelte-ju48ks"><input type="radio" id="int32" name="genType" value="uint32" class="svelte-ju48ks">
+					<label for="int32" class="svelte-ju48ks">Integer</label></div></div>
+
+			<button>Generate</button>
+
+			<div>Output: </div></div>
+
+		<div class="stack"><h2 class="fun-text">How this works</h2>
+			<p>This random number generator is powered by a pseudo-random number generating algorithm
+				called alea. Alea is in a class of <abbr title="Pseudo Random number generators">PRNGs</abbr>
+				called Xor shift generators or shift-register generators. They rely on the binary operation XOR
+				to function. You can find out more
+				<a href="https://en.wikipedia.org/wiki/Xorshift" rel="external">here</a>. I wrote a library
+				to generate random numbers because the browsers default method of doing in (Math.random) is
+				slow, not seedable, and has different implemetations in different browsers. You can find the
+				open source code on
+				<a href="https://github.com/illumincrotty/alea-random" rel="external">github</a>
+				or import it from
+				<a href="https://www.npmjs.com/package/alea-generator" rel="external">npm</a>. Have fun
+				generating!
+			</p></div>
+	</main>
 <div class="svelte-j94h2k"></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1v3tpa4">
+		<script type="module" data-sveltekit-hydrate="1n2w1ov">
 		import { start } from "/illumincrotty/_app/immutable/start-bb76eb8b.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1v3tpa4"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1n2w1ov"]').parentNode,
 			paths: {"base":"/illumincrotty","assets":"/illumincrotty"},
 			session: {},
 			route: true,
@@ -64,9 +94,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 4],
+				nodes: [0, 5],
 				params: {},
-				routeId: "projects"
+				routeId: "random"
 			}
 		});
 	</script>
