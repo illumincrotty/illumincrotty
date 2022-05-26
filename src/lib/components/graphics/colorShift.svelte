@@ -19,7 +19,7 @@
 <div class="color-box">
 	<svg width="100%" height="100%">
 		<!-- grid -->
-		<g style={`transform: translate(0px, ${y < 2 ? 0 : y}px);`}>
+		<g style={`transform: translate(0px, ${y < 2 ? 0 : Math.floor(y)}px);`}>
 			{#each Array.from({ length: dots * 2 + 1 }) as _, row}
 				{#each Array.from({ length: dots }) as _, col}
 					<circle cx={`${dotRatio * (col + 0.5)}vw`} cy={`${dotRatio * (row + 0.5)}vw`} r=".2%" />
@@ -49,15 +49,19 @@
 
 	.color-box {
 		position: absolute;
-		height: 100vh;
+		height: 90vh;
 		left: 0;
 		right: 0;
 		top: 0;
 		z-index: -1;
 
-		background: black;
+		background: white;
 
 		overflow-y: hidden;
+
+		@media (prefers-color-scheme: dark) {
+			background: black;
+		}
 	}
 
 	svg {

@@ -22,7 +22,6 @@
 	{classes}
 	buttonLabel="open navigation"
 	svgLabel="hamburger menu"
-	circle={false}
 >
 	<g class="hamburger" class:is-active={open}>
 		<rect class="hamburger-top" x="0" y="0" height="3" width="24" />

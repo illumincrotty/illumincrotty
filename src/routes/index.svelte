@@ -1,6 +1,7 @@
 <script lang="ts">
 	// template
 
+	import { base } from '$app/paths';
 	import ColorShift from '$lib/components/graphics/colorShift.svelte';
 </script>
 
@@ -13,8 +14,8 @@
 <main>
 	<ColorShift />
 	<div class="page-shift">
-		<div class="card" style="">
-			<div class="box center-i">
+		<div class="card" style="max-width:100%;">
+			<div class="box center-i" style="aspect-ratio: auto 16/9; width:100%; min-height:20rem;">
 				<h1>Brian Crotty</h1>
 				<p>Fullstack Web Developer.</p>
 			</div>
@@ -32,8 +33,8 @@
 	</div>
 	<h2 class="fun-text" style="text-align: center; font-size: var(--font-2xl);">Projects</h2>
 	<div class="grid-cluster">
-		<a class="card box" href="random" rel="external">Random Number Generator</a>
-		<a class="card box" href="squeaker" rel="external">Smooth Noise Generator</a>
+		<div class="card box"><a href={`${base}/random`}>Random Number Generator</a></div>
+		<a class="card box" href={`${base}/squeaker`}>Smooth Noise Generator</a>
 		<a class="card box" href="spotify-waveform" rel="external">Spotify Data Deep Dive</a>
 		<a class="card box" href="https://github.com/illumincrotty/Dead-Simple-PubSub" rel="external"
 			>Type Safe Pub-Sub Implementation</a
@@ -53,7 +54,7 @@
 	.page-shift {
 		width: 100%;
 		height: calc(90vh - 2 * var(--padding));
-		margin-top: 2rem;
+		margin-top: var(--padding);
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
@@ -73,21 +74,6 @@
 		color: var(--light);
 		margin-left: var(--padding);
 		margin-right: var(--padding);
-
-		& > * {
-			aspect-ratio: 16/9;
-			/* background: var(--bg); */
-		}
-	}
-	.fun-text {
-		color: transparent;
-		background-image: linear-gradient(
-			20deg,
-			var(--theme-1) 0%,
-			var(--theme-2) 50%,
-			var(--theme-3) 100%
-		);
-		background-clip: text;
 	}
 
 	.grid-cluster {
@@ -115,5 +101,6 @@
 		gap: var(--padding);
 		width: 100%;
 		padding: var(--padding);
+		position: relative;
 	}
 </style>

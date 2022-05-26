@@ -19,7 +19,7 @@
 	.tri {
 		fill: none;
 		transform-origin: 50px 70px;
-		stroke-width: 0.5%;
+		stroke-width: 0.2%;
 		/*  */
 	}
 

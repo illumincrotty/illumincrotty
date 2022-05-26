@@ -1,9 +1,9 @@
 <script lang="ts">
-	//
+	export let noise = false;
 </script>
 
 <slot />
-<div class="noise" />
+<div class:noise />
 
 <style lang="postcss">
 	@import '$lib/style/cssReset.postcss';

@@ -1,0 +1,5 @@
+************************************* Invoked: Wed May 25 11:55:54 2022
+[0] Arguments: C:\Users\bcrot\AppData\Local\Temp\WinGet\msys2.msys2.20210604\msys2-x86_64-20210604.exe, in, --confirm-command, --accept-messages, --root, C:/msys64
+[5] Operations sanity check succeeded.
+[8] TargetDirectoryInUse : Error : The directory you selected already exists and contains an installation. Choose a different target for installation.
+[8] Answer: "Ok"

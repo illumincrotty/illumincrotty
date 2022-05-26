@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Loader, {
-		loadingSymbol,
-	} from '$lib/components/loading/loader.svelte';
+	import type { loadingSymbol } from '$lib/components/loading/loader.svelte';
+	import Loader from '$lib/components/loading/loader.svelte';
 	import Overlay from './overlay.svelte';
 
-	export let symbol: loadingSymbol = undefined;
+	export let symbol: loadingSymbol = 'dots';
 </script>
 
 <Overlay>

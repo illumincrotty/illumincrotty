@@ -9,11 +9,6 @@
 
 <button
 	on:click
-	on:mousedown={() => {
-		press = true;
-	}}
-	on:blur={() => (press = false)}
-	on:mouseout={() => (press = false)}
 	aria-pressed={press}
 	aria-label={buttonLabel}
 	class="svg-button {classes.join(' ')}"
@@ -65,7 +60,6 @@
 			}
 		}
 		svg {
-			min-width: 2rem;
 			aspect-ratio: 1;
 			vertical-align: middle;
 			padding: 0.25em;
