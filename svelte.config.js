@@ -23,7 +23,6 @@ const config = {
 			base: dev ? '' : '/illumincrotty'
 		},
 		vite: {},
-		trailingSlash: "ignore"
 		
 	}
 	
