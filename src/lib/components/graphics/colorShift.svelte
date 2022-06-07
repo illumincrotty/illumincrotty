@@ -8,7 +8,7 @@
 
 	const rand = aleaFactory('rand');
 
-	let dots = 7;
+	let dots = 9;
 	let dotRatio = 100 / dots;
 
 	let y: number = 0;
@@ -17,21 +17,19 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="color-box">
-	<svg width="100%" height="100%">
+	<svg class="circle-grid">
 		<!-- grid -->
-		<g style={`transform: translate(0px, ${y < 2 ? 0 : Math.floor(y)}px);`}>
-			{#each Array.from({ length: dots * 2 + 1 }) as _, row}
-				{#each Array.from({ length: dots }) as _, col}
-					<circle
-						cx={`${Math.floor(dotRatio * (col + 0.5))}vw`}
-						cy={`${Math.floor(dotRatio * (row + 0.5))}vw`}
-						r=".2%"
-					/>
-				{/each}
+		{#each Array.from({ length: dots * 2 + 1 }) as _, row}
+			{#each Array.from({ length: dots }) as _, col}
+				<circle
+					cx={`${Math.floor(dotRatio * (col + 0.5))}vw`}
+					cy={`${Math.floor(dotRatio * (row + 0.5))}vw`}
+					r=".2%"
+				/>
 			{/each}
-		</g>
+		{/each}
 	</svg>
-	<svg width="100%" height="100%">
+	<svg class="non-grid">
 		<!-- triangles -->
 		<g style={`transform: translate(0px, ${y < 2 ? 0 : -y * 2}px);`}>
 			{#each Array.from({ length: triangleCount }) as _, index}
@@ -53,11 +51,10 @@
 
 	.color-box {
 		position: absolute;
-		height: 90vh;
+		height: 100vh;
 		left: 0;
 		right: 0;
 		top: 0;
-		z-index: -1;
 
 		background: white;
 
@@ -69,9 +66,20 @@
 	}
 
 	svg {
-		z-index: -1;
-		position: absolute;
 		vector-effect: non-scaling-stroke;
+	}
+
+	.non-grid {
+		position: absolute;
+
+		width: 100%;
+		height: 100vh;
+	}
+	.circle-grid {
+		position: fixed;
+		width: 100%;
+		height: 90vh;
+		overflow-y: hidden;
 	}
 
 	circle {
