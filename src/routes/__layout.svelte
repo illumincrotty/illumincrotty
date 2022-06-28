@@ -24,7 +24,11 @@
 	<slot>
 		<!-- <main class="stack center-i" id="page-main" /> -->
 	</slot>
+	<footer />
 </Base>
 
 <style lang="postcss">
+	footer {
+		padding: var(--padding);
+	}
 </style>
