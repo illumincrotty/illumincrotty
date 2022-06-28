@@ -83,6 +83,7 @@
 		flex-wrap: wrap;
 		gap: var(--padding);
 		width: 100%;
+		padding: var(--padding);
 
 		justify-content: center;
 
